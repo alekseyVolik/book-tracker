@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+
+class Book(models.Model):
+    """This model is representing a book"""
+
+    title = models.CharField(max_length=60)
+    author = models.CharField(max_length=60)
