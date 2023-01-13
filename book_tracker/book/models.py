@@ -6,3 +6,4 @@ class Book(models.Model):
 
     title = models.CharField(max_length=60)
     author = models.CharField(max_length=60)
+    amount = models.IntegerField()
