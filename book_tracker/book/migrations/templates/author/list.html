@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список авторов</title>
+</head>
+<body>
+    <div>
+        <p>Список авторов:</p>
+    </div>
+    <div>
+        {% for author in author_list %}
+        <p>{{author.surname}} {{author.name}} {{author.patronymic}}</p>
+        {% empty %}
+        <p>Записи отсутствуют</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
