@@ -9,10 +9,12 @@
         <p>Список авторов:</p>
     </div>
     <div>
-        {% for author in author_list %}
-        <p>{{author.surname}} {{author.name}} {{author.patronymic}}</p>
+        {% for author in bookauthor_list %}
+        <div>
+            <p>{{author.surname}} {{author.name}} {{author.patronymic}}</p>
         {% empty %}
-        <p>Записи отсутствуют</p>
+            <p>Записи отсутствуют</p>
+        </div>
         {% endfor %}
     </div>
 </body>
