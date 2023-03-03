@@ -16,19 +16,19 @@ class BookCreate(CreateView):
     model = Book
     fields = ('title', 'author', 'amount')
     success_url = reverse_lazy('book_list')
-    template_name = 'creating_book.html'
+    template_name = 'book/create.html'
 
 
 class BookInfo(DetailView):
     """The view displays a book info"""
     model = Book
-    template_name = 'book_info.html'
+    template_name = 'book/info.html'
 
 
 class BookList(ListView):
     """The view displays all books"""
     model = Book
-    template_name = 'book_list.html'
+    template_name = 'book/list.html'
 
 
 class AuthorCreate(CreateView):
