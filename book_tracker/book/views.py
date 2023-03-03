@@ -36,18 +36,18 @@ class AuthorCreate(CreateView):
     model = BookAuthor
     fields = ('name', 'surname', 'patronymic')
     success_url = reverse_lazy('author_list')
-    template_name = 'creating_author'
+    template_name = 'author/create.html'
 
 
 class AuthorInfo(DetailView):
     """The view displays author info"""
 
     model = BookAuthor
-    template_name = 'author_info'
+    template_name = 'author/info.html'
 
 
 class AuthorList(ListView):
     """The view displays all authors"""
 
     model = BookAuthor
-    template_name = 'author_list'
+    template_name = 'author/list.html'
