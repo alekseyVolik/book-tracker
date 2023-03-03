@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список книг</title>
+</head>
+<body>
+    <div>
+        <p>Список книг:</p>
+    </div>
+    <div>
+        {% for book in book_list %}
+        <div>
+            <p>{{book.title}} {{book.author}} {{book.amount}}</p>
+        {% empty %}
+            <p>Записи отсутствуют</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
