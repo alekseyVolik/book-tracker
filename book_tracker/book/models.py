@@ -15,3 +15,6 @@ class BookAuthor(models.Model):
     name = models.CharField(max_length=50)
     surname = models.CharField(max_length=50)
     patronymic = models.CharField(max_length=50)
+
+    def __repr__(self):
+        return f'{self.surname} {self.name} {self.patronymic}'
